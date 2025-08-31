@@ -1,1 +1,96 @@
 /* styles.css */
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+body {
+  background-image: linear-gradient(to bottom, #013a9d, #6d9df6, #f5b111);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  min-width: 360px;
+  max-width: 400px;
+}
+form {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+input {
+  font-size: 1.15rem;
+  width:20ch;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-left: 1rem;
+  
+}
+button {
+  font-size: 1.15rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  border-radius: 5px;
+  border: none;
+  margin-left: .5rem;
+
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.app-child {
+  flex: 1 1 auto;
+}
+.title-block {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 4rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-weight: 700;
+  gap: 10px;
+  
+}
+#resolved-location {
+  font-size: .75rem;
+  font-style: italic;
+}
+
+#currently{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+#date {
+  font-size: .75rem;
+  font-weight: 100;
+}
+#current-temp {
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-size: 5rem;
+}
+
+#wx-icon img {
+  padding-top: 1rem;
+  height: 6rem;
+  width: auto; /* keep width automatic to preserve aspect ratio */
+  max-width: 6rem; /* optional, to limit width */
+  object-fit: contain; /* scales image to fit within given size without distortion */
+}
+
+.wx-message {
+  padding: 2rem;
+}
+.error-message {
+  padding: 2rem;
+  display: none;
+}
+.error-display {
+  background: red;
+  display: block;
+}
+
+

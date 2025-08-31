@@ -7,6 +7,32 @@
   <title>Odin Weather App</title>
 </head>
 <body>
-  <script src="./main.js"></script> 
+  <!-- input to get weather location -->
+  <form class="weather-form">
+    <input type="text" class="location-input" placeholder="Enter Location" onfocus="this.value='';">
+    <button type="submit">Get Weather</button>
+  </form>
+  <!-- placeholders -->
+  <div class="app-container">
+    <div class="app-child title-block">
+      <span id="current-location"></span>
+      <span id="resolved-location"></span>
+      <span id="date"></span>
+    </div>
+    <div class="app-child current-conditions" id="currently">
+      <div id="current-temp"></div>
+      <div id="wx-icon"><img class="weather-icon" src=""></div>
+      <div id="feels-like"></div>
+      <div class="app-child three" id="conditions"></div>
+      <div class="app-child hi" id="hi">Hi 76&degF</div>
+      <div class="app-child lo" id="lo">Lo 66&degF</div>
+    </div>
+    <div class="app-child messages">
+      <div class="app-child wx-message" id="wx-message">WX Message</div>
+      <div class="app-child error-message" id ="error-message">Error Message</div>
+    </div>
+    
+  </div> <!-- app container -->
+  <script src="/main.js"></script> 
 </body>
 </html>
