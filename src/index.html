@@ -7,13 +7,14 @@
   <title>Odin Weather App</title>
 </head>
 <body>
+  <div class="app-container">
   <!-- input to get weather location -->
   <form class="weather-form">
     <input type="text" class="location-input" placeholder="Enter Location" onfocus="this.value='';">
     <button type="submit">Get Weather</button>
   </form>
   <!-- placeholders -->
-  <div class="app-container">
+  
     <div class="app-child title-block">
       <span id="current-location"></span>
       <span id="resolved-location"></span>
@@ -33,6 +34,7 @@
     </div>
     
   </div> <!-- app container -->
+
   <script src="/main.js"></script> 
 </body>
 </html>

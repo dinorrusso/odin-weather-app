@@ -1,15 +1,27 @@
 /* styles.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  height: 100%;
 }
 body {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  height: 100vh; 
+  margin: 0 auto;
   background-image: linear-gradient(to bottom, #013a9d, #6d9df6, #f5b111);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 100vh;
-  min-width: 360px;
-  max-width: 400px;
 }
 form {
   padding-top: 1rem;
@@ -18,15 +30,13 @@ form {
 input {
   font-size: 1.15rem;
   width:20ch;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  margin-left: 1rem;
+  padding: .5rem;
+  border-radius: 5px;
   
 }
 button {
-  font-size: 1.15rem;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
+  font-size: 1.1rem;
+  padding: .5rem;
   border-radius: 5px;
   border: none;
   margin-left: .5rem;
@@ -36,21 +46,19 @@ button {
 .app-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-}
-.app-child {
-  flex: 1 1 auto;
+  justify-content: flex-start; 
+  align-items: center; 
+  height: 100vh;
+  max-width: 450px;
+  padding: 1rem; 
+
 }
 .title-block {
   display: flex;
   flex-direction: column;
-  width: 100vw;
   height: 4rem;
-  padding-top: 1rem;
-  padding-left: 1rem;
+  padding: 1rem;
   font-weight: 700;
-  gap: 10px;
-  
 }
 #resolved-location {
   font-size: .75rem;
@@ -58,9 +66,16 @@ button {
 }
 
 #currently{
+  margin-top: 2rem;
+  /* max-width: 450px; */
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  align-items: center;
+  background: #6d9df6;
+  border-radius: 20px;
+  padding-bottom: 2rem;
 }
 
 #date {
@@ -68,17 +83,13 @@ button {
   font-weight: 100;
 }
 #current-temp {
-  padding-left: 1rem;
   padding-top: 1rem;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 #wx-icon img {
   padding-top: 1rem;
-  height: 6rem;
-  width: auto; /* keep width automatic to preserve aspect ratio */
-  max-width: 6rem; /* optional, to limit width */
-  object-fit: contain; /* scales image to fit within given size without distortion */
+  object-fit: contain;
 }
 
 .wx-message {
@@ -92,5 +103,3 @@ button {
   background: red;
   display: block;
 }
-
-
